@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/main_menu/main_menu.gd" type="Script" id=1]
+
+[node name="main_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="button_start" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 276.0
+text = "start"
+
+[node name="button_settings" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 312.0
+margin_right = 576.0
+margin_bottom = 332.0
+text = "settings"
+
+[node name="button_quit" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 360.0
+margin_right = 576.0
+margin_bottom = 380.0
+text = "exit"
+
+[node name="button_exit_yes" type="Button" parent="."]
+margin_left = 768.0
+margin_top = 384.0
+margin_right = 832.0
+margin_bottom = 448.0
+text = "Y"
+
+[node name="button_exit_no" type="Button" parent="."]
+margin_left = 192.0
+margin_top = 384.0
+margin_right = 256.0
+margin_bottom = 448.0
+text = "N"
+
+[connection signal="pressed" from="button_start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="button_settings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="button_quit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="button_exit_yes" to="." method="_on_button_exit_yes_pressed"]
+[connection signal="pressed" from="button_exit_no" to="." method="_on_button_exit_no_pressed"]

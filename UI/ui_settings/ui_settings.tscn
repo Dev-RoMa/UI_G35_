@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/ui_settings/ui_settings.gd" type="Script" id=1]
+
+[node name="ui_settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="text_res" type="TextEdit" parent="."]
+margin_left = 448.0
+margin_top = 128.0
+margin_right = 640.0
+margin_bottom = 192.0
+
+[node name="button_res_less" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 448.0
+margin_bottom = 192.0
+
+[node name="button_res_mor" type="Button" parent="."]
+margin_left = 640.0
+margin_top = 128.0
+margin_right = 704.0
+margin_bottom = 192.0
+
+[node name="check_fs" type="CheckBox" parent="."]
+margin_left = 384.0
+margin_top = 488.0
+margin_right = 408.0
+margin_bottom = 512.0
+
+[node name="button_back_to_main" type="Button" parent="."]
+margin_left = 896.0
+margin_top = 64.0
+margin_right = 960.0
+margin_bottom = 128.0
+text = "x"
+
+[connection signal="pressed" from="button_res_less" to="." method="_on_button_res_less_pressed"]
+[connection signal="pressed" from="button_res_mor" to="." method="_on_button_res_mor_pressed"]
+[connection signal="toggled" from="check_fs" to="." method="_on_check_fs_toggled"]
+[connection signal="pressed" from="button_back_to_main" to="." method="_on_button_back_to_main_pressed"]
